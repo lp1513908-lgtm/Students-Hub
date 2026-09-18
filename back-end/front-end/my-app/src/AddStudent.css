@@ -1,0 +1,467 @@
+/* =================================
+   ADD STUDENT PAGE
+================================= */
+
+.add-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 50px 20px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #1d1a14 0%,
+            #0d0d0f 42%,
+            #09090b 100%
+        );
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =================================
+   MAIN CARD
+================================= */
+
+.add-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 560px;
+
+    height: fit-content;
+
+    padding: 38px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1a1a1e,
+            #111114
+        );
+
+    border: 1px solid #403823;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.6),
+        0 0 45px rgba(201, 162, 77, 0.07);
+
+    overflow: hidden;
+}
+
+
+/* Gold top line */
+
+.add-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #c9a24d,
+            transparent
+        );
+}
+
+
+/* =================================
+   BACK LINK
+================================= */
+
+.back-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    color: #d8b35a;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 30px;
+
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: white;
+
+    transform: translateX(-5px);
+}
+
+
+/* =================================
+   ICON
+================================= */
+
+.add-icon {
+    width: 78px;
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #30291c,
+            #1d1a15
+        );
+
+    border: 1px solid #69562e;
+
+    border-radius: 22px;
+
+    font-size: 34px;
+
+    box-shadow:
+        0 12px 30px rgba(201, 162, 77, 0.12);
+
+    transform: rotate(-2deg);
+
+    transition: 0.3s;
+}
+
+.add-card:hover .add-icon {
+    transform: rotate(0deg) translateY(-3px);
+
+    border-color: #c9a24d;
+
+    box-shadow:
+        0 15px 35px rgba(201, 162, 77, 0.16);
+}
+
+
+/* =================================
+   TITLE
+================================= */
+
+.add-card h1 {
+    text-align: center;
+
+    font-size: 34px;
+
+    letter-spacing: 0.5px;
+
+    margin: 0 0 10px;
+}
+
+
+.add-card .subtitle {
+    text-align: center;
+
+    color: #888;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin: 0 0 32px;
+}
+
+
+/* =================================
+   FORM
+================================= */
+
+.input-group {
+    margin-bottom: 21px;
+}
+
+
+.input-group label {
+    display: block;
+
+    color: #d2d2d2;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 9px;
+}
+
+
+/* =================================
+   INPUT
+================================= */
+
+.input-group input,
+.input-group select {
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    background: #0d0d10;
+
+    border: 1px solid #39393f;
+
+    border-radius: 10px;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s,
+        box-shadow 0.3s,
+        background 0.3s;
+}
+
+
+.input-group input::placeholder {
+    color: #626269;
+}
+
+
+.input-group input:hover,
+.input-group select:hover {
+    border-color: #55555c;
+}
+
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #c9a24d;
+
+    background: #111114;
+
+    box-shadow:
+        0 0 0 3px rgba(201, 162, 77, 0.08);
+}
+
+
+/* =================================
+   SELECT
+================================= */
+
+.input-group select {
+    color: #d8b35a;
+
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+
+.input-group select option {
+    background: #151518;
+
+    color: white;
+}
+
+
+/* =================================
+   ADD BUTTON
+================================= */
+
+.add-btn {
+    width: 100%;
+
+    height: 50px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c9a24d,
+            #a98235
+        );
+
+    color: #111;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        background 0.3s;
+}
+
+
+.add-btn:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #d8b35a,
+            #c9a24d
+        );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(201, 162, 77, 0.2);
+}
+
+
+.add-btn:active {
+    transform: translateY(0);
+}
+
+
+.add-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =================================
+   TOAST
+================================= */
+
+.toast {
+    position: fixed;
+
+    top: 25px;
+    right: 25px;
+
+    z-index: 9999;
+
+    min-width: 250px;
+
+    padding: 15px 20px;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.45);
+
+    animation:
+        toastSlide 0.3s ease;
+}
+
+
+.success-toast {
+    background: #c9a24d;
+
+    color: #111;
+}
+
+
+.error-toast {
+    background: #8b2e2e;
+
+    color: white;
+}
+
+
+@keyframes toastSlide {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .add-page {
+        padding: 25px 15px;
+    }
+
+
+    .add-card {
+        padding: 28px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .add-card h1 {
+        font-size: 28px;
+    }
+
+
+    .add-card .subtitle {
+        font-size: 13px;
+    }
+
+
+    .add-icon {
+        width: 65px;
+        height: 65px;
+
+        font-size: 28px;
+
+        border-radius: 18px;
+    }
+
+
+    .toast {
+        top: 15px;
+
+        left: 15px;
+        right: 15px;
+
+        min-width: auto;
+
+        text-align: center;
+    }
+}

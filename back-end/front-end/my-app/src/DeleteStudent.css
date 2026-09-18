@@ -1,0 +1,368 @@
+/* =================================
+   DELETE PAGE
+================================= */
+
+.delete-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 50px 20px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #1b1914 0%,
+            #0d0d0f 45%,
+            #0a0a0c 100%
+        );
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =================================
+   DELETE CARD
+================================= */
+
+.delete-card {
+    width: 100%;
+    max-width: 560px;
+
+    height: fit-content;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        145deg,
+        #18181c,
+        #111114
+    );
+
+    border: 1px solid #4b2d2d;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.55),
+        0 0 30px rgba(139, 46, 46, 0.06);
+}
+
+
+/* =================================
+   BACK LINK
+================================= */
+
+.back-link {
+    display: inline-block;
+
+    color: #d8b35a;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: white;
+
+    transform: translateX(-4px);
+}
+
+
+/* =================================
+   DELETE ICON
+================================= */
+
+.delete-icon {
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 5px auto 20px;
+
+    background: #2a1818;
+
+    border: 1px solid #713b3b;
+
+    border-radius: 50%;
+
+    font-size: 32px;
+
+    box-shadow:
+        0 10px 25px rgba(139, 46, 46, 0.12);
+}
+
+
+/* =================================
+   HEADING
+================================= */
+
+.delete-card h1 {
+    text-align: center;
+
+    font-size: 32px;
+
+    margin: 0 0 10px;
+}
+
+
+.subtitle {
+    text-align: center;
+
+    color: #888;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   INPUT GROUP
+================================= */
+
+.delete-group {
+    margin-bottom: 20px;
+}
+
+
+.delete-group label {
+    display: block;
+
+    color: #ccc;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+.delete-group input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    box-sizing: border-box;
+
+    background: #0f0f12;
+
+    border: 1px solid #3b3b40;
+
+    border-radius: 9px;
+
+    color: white;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+.delete-group input::placeholder {
+    color: #666;
+}
+
+
+.delete-group input:focus {
+    border-color: #a83b3b;
+
+    box-shadow:
+        0 0 0 3px rgba(168, 59, 59, 0.08);
+}
+
+
+/* =================================
+   DELETE BUTTON
+================================= */
+
+.delete-btn {
+    width: 100%;
+
+    height: 48px;
+
+    margin-top: 5px;
+
+    background: #8b2e2e;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.delete-btn:hover {
+    background: #a83b3b;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(139, 46, 46, 0.2);
+}
+
+
+.delete-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =================================
+   WARNING
+================================= */
+
+.delete-warning {
+    margin: 20px 0 0;
+
+    padding: 12px;
+
+    text-align: center;
+
+    background: #211516;
+
+    border: 1px solid #4b2d2d;
+
+    border-radius: 9px;
+
+    color: #c88a8a;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =================================
+   TOAST
+================================= */
+
+.toast {
+    position: fixed;
+
+    top: 25px;
+    right: 25px;
+
+    z-index: 9999;
+
+    padding: 15px 22px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
+
+    animation: toastSlide 0.3s ease;
+}
+
+
+.success-toast {
+    background: #c9a24d;
+
+    color: #111;
+}
+
+
+.error-toast {
+    background: #8b2e2e;
+
+    color: white;
+}
+
+
+@keyframes toastSlide {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .delete-page {
+        padding: 25px 15px;
+    }
+
+
+    .delete-card {
+        padding: 25px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .delete-card h1 {
+        font-size: 27px;
+    }
+
+
+    .delete-icon {
+        width: 62px;
+        height: 62px;
+
+        font-size: 27px;
+    }
+
+
+    .toast {
+        top: 15px;
+
+        left: 15px;
+        right: 15px;
+
+        text-align: center;
+    }
+}

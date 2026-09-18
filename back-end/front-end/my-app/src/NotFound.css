@@ -1,0 +1,146 @@
+.not-found-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: #0d0d0f;
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+.not-found-card {
+    width: 450px;
+
+    padding: 50px 40px;
+
+    text-align: center;
+
+    background: #151518;
+
+    border: 1px solid #c9a24d;
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.55),
+        0 0 30px rgba(201, 162, 77, 0.08);
+}
+
+.not-found-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #24201a;
+
+    border: 1px solid #514322;
+    border-radius: 50%;
+
+    font-size: 32px;
+}
+
+.not-found-label {
+    color: #d8b35a;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+.not-found-card h1 {
+    color: #d8b35a;
+
+    font-size: 90px;
+
+    line-height: 1;
+
+    margin: 10px 0;
+}
+
+.not-found-card h2 {
+    font-size: 27px;
+
+    margin: 10px 0 15px;
+}
+
+.not-found-text {
+    color: #888;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.not-found-btn {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    background: #c9a24d;
+    color: #111;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.not-found-btn:hover {
+    background: #d8b35a;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(201, 162, 77, 0.2);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .not-found-page {
+        padding: 20px;
+    }
+
+    .not-found-card {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 40px 25px;
+    }
+
+    .not-found-card h1 {
+        font-size: 70px;
+    }
+
+    .not-found-card h2 {
+        font-size: 23px;
+    }
+
+    .not-found-text {
+        font-size: 14px;
+    }
+
+    .not-found-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

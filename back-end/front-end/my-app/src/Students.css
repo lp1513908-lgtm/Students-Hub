@@ -1,0 +1,760 @@
+.dashboard-navigation {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 55px;
+}
+
+.dashboard-btn {
+    display: inline-block;
+    padding: 13px 28px;
+    background: #c9a24d;
+    color: #111;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.dashboard-btn:hover {
+    background: #d8b35a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(201, 162, 77, 0.25);
+}
+
+
+
+
+.card-edit-btn:hover {
+    background: #d8b35a;
+    transform: translateY(-2px);
+}
+
+.card-delete-btn:hover {
+    background: #a83b3b;
+    transform: translateY(-2px);
+}
+.toast {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 9999;
+    padding: 15px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    animation: toastSlide 0.3s ease;
+}
+
+.success-toast {
+    background: #c9a24d;
+    color: #111;
+}
+
+.error-toast {
+    background: #8b2e2e;
+    color: white;
+}
+
+@keyframes toastSlide {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Loading */
+.loading-box,
+.error-box,
+.empty-box {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    background: #151518;
+    border: 1px solid #3b3b40;
+    border-radius: 15px;
+}
+
+.loading-box h3,
+.error-box h3,
+.empty-box h3 {
+    color: #d8b35a;
+}
+
+.loading-box p,
+.error-box p,
+.empty-box p {
+    color: #888;
+}
+
+
+/* Loader */
+.loader {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto 20px;
+    border: 4px solid #333;
+    border-top: 4px solid #c9a24d;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Retry button */
+.retry-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #c9a24d;
+    color: #111;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.retry-btn:hover {
+    background: #d8b35a;
+}
+
+
+/* Student action buttons */
+.student-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.card-edit-btn,
+.card-delete-btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 7px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.card-edit-btn {
+    background: #c9a24d;
+    color: #111;
+}
+
+.card-delete-btn {
+    background: #8b2e2e;
+    color: white;
+    border: none;
+}
+
+.card-edit-btn:hover {
+    background: #d8b35a;
+    transform: translateY(-2px);
+}
+
+.card-delete-btn:hover {
+    background: #a83b3b;
+    transform: translateY(-2px);
+}
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .header-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .student-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .home-page {
+        overflow-x: hidden;
+    }
+
+    /* Header */
+
+    .header {
+        padding: 20px 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .header-buttons {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .nav-btn {
+        padding: 9px 13px;
+        font-size: 13px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+    /* Statistics */
+
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+
+    /* Dashboard */
+
+    .dashboard-navigation {
+        margin: 30px 0 40px;
+    }
+
+    .dashboard-btn {
+        width: 80%;
+        text-align: center;
+    }
+
+
+    /* Courses */
+
+    .course-section {
+        padding: 50px 20px;
+    }
+
+    .courses {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .course-card {
+        padding: 25px 20px;
+    }
+
+
+    /* Search */
+
+    .search-filter {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 12px;
+    }
+
+    .search-filter input,
+    .search-filter select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* Students */
+
+    .student-section {
+        padding: 50px 20px;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .student-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* Student buttons */
+
+    .student-actions {
+        flex-direction: column;
+    }
+
+    .card-edit-btn,
+    .card-delete-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* About */
+
+    .about-section {
+        padding: 60px 20px;
+    }
+
+
+    /* Contact */
+
+    .contact-section {
+        padding: 60px 20px;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+
+    /* Toast */
+
+    .toast {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        text-align: center;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+}
+/* =================================
+   PROFESSIONAL STUDENT CARD
+================================= */
+
+.student-card {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        #18181c,
+        #111114
+    );
+
+    border: 1px solid #36363b;
+    border-radius: 18px;
+
+    padding: 25px;
+
+    transition: 0.35s ease;
+}
+
+.student-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #c9a24d;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: 0.35s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #c9a24d;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.5),
+        0 0 25px rgba(201, 162, 77, 0.08);
+}
+
+.student-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* =================================
+   STUDENT AVATAR
+================================= */
+
+.student-avatar {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    background: #c9a24d;
+    color: #111;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 20px rgba(201, 162, 77, 0.15);
+}
+
+
+/* =================================
+   STUDENT INFORMATION
+================================= */
+
+.student-info h3 {
+    color: #ffffff;
+
+    font-size: 21px;
+
+    margin: 0 0 12px;
+}
+
+.student-info p {
+    color: #999;
+
+    font-size: 14px;
+
+    margin: 8px 0;
+}
+
+
+/* =================================
+   VIEW DETAILS BUTTON
+================================= */
+
+.view-btn {
+    display: block;
+
+    margin-top: 18px;
+
+    padding: 11px;
+
+    text-align: center;
+
+    background: #201e19;
+
+    border: 1px solid #514322;
+    border-radius: 9px;
+
+    color: #d8b35a;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #c9a24d;
+
+    color: #111;
+
+    border-color: #c9a24d;
+}
+
+
+/* =================================
+   EDIT + DELETE
+================================= */
+
+.student-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 12px;
+}
+
+.card-edit-btn,
+.card-delete-btn {
+    flex: 1;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.card-edit-btn {
+    background: #c9a24d;
+    color: #111;
+}
+
+.card-delete-btn {
+    background: #722b2b;
+    color: white;
+
+    border: none;
+}
+
+.card-edit-btn:hover {
+    background: #d8b35a;
+
+    transform: translateY(-2px);
+}
+
+.card-delete-btn:hover {
+    background: #963b3b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   MOBILE STUDENT CARD
+================================= */
+
+@media (max-width: 600px) {
+
+    .student-card {
+        padding: 22px;
+    }
+
+    .student-avatar {
+        width: 58px;
+        height: 58px;
+
+        font-size: 22px;
+    }
+
+    .student-info h3 {
+        font-size: 19px;
+    }
+
+    .student-actions {
+        flex-direction: column;
+    }
+
+    .card-edit-btn,
+    .card-delete-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+/* =================================
+   SEARCH + COURSE FILTER
+================================= */
+
+.search-filter {
+    width: 86%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    box-sizing: border-box;
+
+    background: #151518;
+
+    border: 1px solid #36363b;
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.search-filter input {
+    flex: 1;
+
+    height: 46px;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    background: #0f0f12;
+
+    border: 1px solid #3b3b40;
+    border-radius: 9px;
+
+    color: white;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.search-filter input::placeholder {
+    color: #777;
+}
+
+.search-filter input:focus {
+    border-color: #c9a24d;
+
+    box-shadow:
+        0 0 0 3px rgba(201, 162, 77, 0.08);
+}
+
+
+.search-filter select {
+    width: 210px;
+
+    height: 46px;
+
+    padding: 0 14px;
+
+    box-sizing: border-box;
+
+    background: #0f0f12;
+
+    border: 1px solid #3b3b40;
+    border-radius: 9px;
+
+    color: #d8b35a;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-filter select:focus {
+    border-color: #c9a24d;
+
+    box-shadow:
+        0 0 0 3px rgba(201, 162, 77, 0.08);
+}
+
+
+/* =================================
+   MOBILE SEARCH
+================================= */
+
+@media (max-width: 600px) {
+
+    .search-filter {
+        width: auto;
+
+        margin: 0 20px;
+
+        padding: 18px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .search-filter input,
+    .search-filter select {
+        width: 100%;
+    }
+}
+/* =================================
+   COURSE BADGE
+================================= */
+
+.course-badge {
+    display: inline-block;
+
+    margin-top: 5px;
+    padding: 6px 12px;
+
+    background: #24201a;
+
+    border: 1px solid #514322;
+    border-radius: 20px;
+
+    color: #d8b35a;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+
+/* =================================
+   COURSE BADGE HOVER
+================================= */
+
+.student-card:hover .course-badge {
+    background: #c9a24d;
+    color: #111;
+
+    border-color: #c9a24d;
+}
