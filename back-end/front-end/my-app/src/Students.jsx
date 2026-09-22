@@ -24,7 +24,7 @@ function Students() {
         setLoading(true);
         setError("");
 
-        fetch("http://localhost:3000/users")
+        fetch("https://students-hub-3.onrender.comusers")
             .then((res) => {
                 if (!res.ok) {
                     throw new Error("Failed to load students");
@@ -108,7 +108,7 @@ function Students() {
 
         try {
             const response = await fetch(
-                `http://localhost:3000/users/${student._id}`,
+                `https://students-hub-3.onrender.com/users/${student._id}`,
                 {
                     method: "DELETE"
                 }

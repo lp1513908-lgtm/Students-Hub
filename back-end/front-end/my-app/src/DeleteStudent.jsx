@@ -40,7 +40,7 @@ function DeleteStudent() {
             setLoading(true);
 
             const response = await fetch(
-                `http://localhost:3000/users/${id.trim()}`,
+                `https://students-hub-3.onrender.com/users/${id.trim()}`,
                 {
                     method: "DELETE"
                 }

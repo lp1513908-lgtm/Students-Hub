@@ -19,7 +19,7 @@ function Dashboard() {
             setError("");
 
             const response = await fetch(
-                "http://localhost:3000/users"
+                "https://students-hub-3.onrender.com"
             );
 
             if (!response.ok) {

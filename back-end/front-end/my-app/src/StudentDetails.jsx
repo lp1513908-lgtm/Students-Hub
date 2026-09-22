@@ -32,7 +32,7 @@ function StudentDetails() {
         setLoading(true);
         setError("");
 
-        fetch(`http://localhost:3000/users/${id}`)
+        fetch(`https://students-hub-3.onrender.com/users/${id}`)
             .then((res) => {
                 if (!res.ok) {
                     throw new Error("Student not found");
@@ -61,7 +61,7 @@ function StudentDetails() {
 
         try {
             const response = await fetch(
-                `http://localhost:3000/users/${student._id}`,
+                `http://https://students-hub-3.onrender.com/users/${student._id}`,
                 {
                     method: "DELETE"
                 }

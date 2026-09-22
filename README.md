@@ -85,7 +85,7 @@ node server.js
 The backend server runs on:
 
 ```text
-http://localhost:3000
+https://students-hub-3.onrender.com
 ```
 
 ### 4. Start the Frontend

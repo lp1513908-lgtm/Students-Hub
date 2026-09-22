@@ -59,7 +59,7 @@ function UpdateStudent() {
             setError("");
 
             const response = await fetch(
-                `http://localhost:3000/users/${studentId.trim()}`
+                `https://students-hub-3.onrender.com/users/${studentId.trim()}`
             );
 
             const data = await response.json();
@@ -106,7 +106,7 @@ function UpdateStudent() {
                     setLoading(true);
 
                     const response = await fetch(
-                        `http://localhost:3000/users/${urlStudentId}`
+                        `https://students-hub-3.onrender.com/users/${urlStudentId}`
                     );
 
                     const data = await response.json();
@@ -199,7 +199,7 @@ function UpdateStudent() {
             setUpdating(true);
 
             const response = await fetch(
-                `http://localhost:3000/users/${studentId.trim()}`,
+                `https://students-hub-3.onrender.com/users/${studentId.trim()}`,
                 {
                     method: "PUT",
 

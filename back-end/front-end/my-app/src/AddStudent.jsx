@@ -64,7 +64,7 @@ function AddStudent() {
             setLoading(true);
 
             const response = await fetch(
-                "http://localhost:3000/adduser",
+                "https://students-hub-3.onrender.com",
                 {
                     method: "POST",
                     headers: {

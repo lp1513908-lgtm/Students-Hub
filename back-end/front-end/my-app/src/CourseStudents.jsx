@@ -19,7 +19,7 @@ function CourseStudents() {
         setLoading(true);
 
         fetch(
-            `http://localhost:3000/course/${encodeURIComponent(courseName)}`
+            `https://students-hub-3.onrender.com/course/${encodeURIComponent(courseName)}`
         )
             .then((res) => res.json())
             .then((data) => {
