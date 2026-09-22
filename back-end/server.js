@@ -1,15 +1,28 @@
+require("dotenv").config();
+require("dns").setServers(["8.8.8.8", "1.1.1.1"]);
+
 const exp = require("express");
 const cors = require("cors");
-const { MongoClient, ObjectId } = require("mongodb");
+const {
+    MongoClient,
+    ObjectId,
+    ServerApiVersion
+} = require("mongodb");
 
 const app = exp();
 
 app.use(exp.json());
 app.use(cors());
 
-const url = "mongodb://localhost:27017/";
-const client = new MongoClient(url);
+const url = process.env.MONGO_URI;
 
+const client = new MongoClient(url, {
+    serverApi: {
+        version: ServerApiVersion.v1,
+        strict: true,
+        deprecationErrors: true
+    }
+});
 
 async function startservr() {
 
