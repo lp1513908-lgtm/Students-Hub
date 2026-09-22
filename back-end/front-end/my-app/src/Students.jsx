@@ -24,7 +24,7 @@ function Students() {
         setLoading(true);
         setError("");
 
-        fetch("https://students-hub-3.onrender.comusers")
+        fetch("https://students-hub-3.onrender.com/users")
             .then((res) => {
                 if (!res.ok) {
                     throw new Error("Failed to load students");
