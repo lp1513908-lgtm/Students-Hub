@@ -1,14 +1,23 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem("isAdmin");
+        navigate("/login");
+    };
+
     return (
         <nav className="navbar">
 
+            {/* LOGO */}
             <NavLink to="/" className="navbar-logo">
                 🎓 Students Hub
             </NavLink>
 
+            {/* NAVIGATION LINKS */}
             <div className="navbar-links">
 
                 <NavLink
@@ -55,6 +64,14 @@ function Navbar() {
                 >
                     🗑️ Delete
                 </NavLink>
+
+                {/* LOGOUT */}
+                <button
+                    onClick={handleLogout}
+                    className="logout-btn"
+                >
+                    🚪 Logout
+                </button>
 
             </div>
 
