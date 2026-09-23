@@ -551,3 +551,19 @@
         text-align: center;
     }
 }
+.dashboard-logout-btn {
+    border: none;
+    cursor: pointer;
+    padding: 12px 22px;
+    border-radius: 8px;
+    background: #dc2626;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.dashboard-logout-btn:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+}
