@@ -64,7 +64,7 @@ function AddStudent() {
             setLoading(true);
 
             const response = await fetch(
-                "https://students-hub-3.onrender.com",
+               "https://students-hub-3.onrender.com/adduser",
                 {
                     method: "POST",
                     headers: {
