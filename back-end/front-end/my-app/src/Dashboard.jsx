@@ -18,9 +18,11 @@ function Dashboard() {
             setLoading(true);
             setError("");
 
-            const response = await fetch(
-                "https://students-hub-3.onrender.com"
-            );
+            
+                const response = await fetch(
+            "https://students-hub-3.onrender.com/users"
+);
+            
 
             if (!response.ok) {
                 throw new Error("Failed to fetch students");
