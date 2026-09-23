@@ -262,10 +262,16 @@ function Dashboard() {
 
                 </div>
 
-
-                <div className="admin-badge">
-                    🔐 Admin
-                </div>
+<button
+    onClick={() => {
+        localStorage.removeItem("isAdmin");
+        window.location.href = "/login";
+    }}
+    className="dashboard-logout-btn"
+>
+    🚪 Logout
+</button>
+               
 
             </section>
 
